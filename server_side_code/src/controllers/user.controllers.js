@@ -96,7 +96,8 @@ const loginUser = asyncHandler(async (req, res) => {
 
   const options = {
     httpOnly: true,
-    secure: false, //make true in production
+    secure: true, //make true in production
+    sameSite: "None",
   };
 
   return res
@@ -131,7 +132,8 @@ const logoutUser = asyncHandler(async (req, res) => {
 
   const options = {
     httpOnly: true,
-    secure: false, //make true in production
+    secure: true, //make true in production
+    sameSite: "None",
   };
 
   return res
@@ -167,7 +169,8 @@ const refreshAccessToken = asyncHandler(async (req, res) => {
 
     const options = {
       httpOnly: true,
-      secure: false, //make true in production
+      secure: true, //make true in production
+      sameSite: "None",
     };
 
     const { accessToken, newRefreshToken } =
