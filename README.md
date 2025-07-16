@@ -1,8 +1,11 @@
 # 💬 Messenger Application
 
 A full-stack real-time messaging platform that allows users to chat securely, share files, and manage contacts — all through a clean and responsive user interface. Built with the **MERN stack** (MongoDB, Express.js, React, Node.js) and **Socket.IO** for real-time WebSocket communication.
+🚀 Live Demo: https://privatechat-client.onrender.com
 
 ---
+
+
 
 ## 🚀 Key Features
 
