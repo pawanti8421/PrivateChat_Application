@@ -19,9 +19,12 @@ function ChatLayout() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/api/v1/users/current-user", {
-        withCredentials: true,
-      })
+      .get(
+        "https://privatechat-server.onrender.com/api/v1/users/current-user",
+        {
+          withCredentials: true,
+        }
+      )
       .then((data) => {
         setUserData(data.data.data);
       })

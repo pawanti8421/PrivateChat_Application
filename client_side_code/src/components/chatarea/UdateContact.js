@@ -24,7 +24,7 @@ function UpdateContact({
 
     axios
       .post(
-        "http://localhost:8000/api/v1/contact/update-contact-detail",
+        "https://privatechat-server.onrender.com/api/v1/contact/update-contact-detail",
         formData,
         {
           withCredentials: true,

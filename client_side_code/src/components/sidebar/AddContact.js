@@ -25,9 +25,13 @@ function AddContact({
     setShowModal(false);
 
     axios
-      .post("http://localhost:8000/api/v1/contact/add-contact", formData, {
-        withCredentials: true,
-      })
+      .post(
+        "https://privatechat-server.onrender.com/api/v1/contact/add-contact",
+        formData,
+        {
+          withCredentials: true,
+        }
+      )
       .then((data) => {
         alert(data.data.message);
         handleAddContact();

@@ -34,7 +34,10 @@ function Registration({ setShowRegister, showRegister }) {
     };
 
     axios
-      .post("http://localhost:8000/api/v1/users/send-otp", formData)
+      .post(
+        "https://privatechat-server.onrender.com/api/v1/users/send-otp",
+        formData
+      )
       .then((data) => {
         setServerOtp(data.data.data);
         alert(data.data.message);
@@ -59,7 +62,10 @@ function Registration({ setShowRegister, showRegister }) {
     };
 
     axios
-      .post("http://localhost:8000/api/v1/users/register", formData)
+      .post(
+        "https://privatechat-server.onrender.com/api/v1/users/register",
+        formData
+      )
       .then((data) => {
         alert(data.data.message);
         navigate(`/`);

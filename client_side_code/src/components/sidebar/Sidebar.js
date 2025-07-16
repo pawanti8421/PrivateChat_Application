@@ -10,9 +10,12 @@ function Sidebar({ setActiveChat }) {
   const [searchTerm, setSearchTerm] = useState("");
   const fetchContacts = () => {
     axios
-      .get("http://localhost:8000/api/v1/contact/get-all-contact", {
-        withCredentials: true,
-      })
+      .get(
+        "https://privatechat-server.onrender.com/api/v1/contact/get-all-contact",
+        {
+          withCredentials: true,
+        }
+      )
       .then((data) => {
         setContacts(data.data.data);
       })

@@ -6,7 +6,7 @@ import ChatHeader from "./ChatHeader";
 import io from "socket.io-client";
 import axios from "axios";
 
-const socket = io("http://localhost:8000");
+const socket = io("https://privatechat-server.onrender.com");
 
 function ChatArea({ activeChat, setActiveChat }) {
   const message = useRef("");
@@ -20,9 +20,13 @@ function ChatArea({ activeChat, setActiveChat }) {
     };
 
     axios
-      .post("http://localhost:8000/api/v1/message/get-all-messages", formData, {
-        withCredentials: true,
-      })
+      .post(
+        "https://privatechat-server.onrender.com/api/v1/message/get-all-messages",
+        formData,
+        {
+          withCredentials: true,
+        }
+      )
       .then((res) => {
         const allMessages = res.data.data;
 
@@ -97,12 +101,16 @@ function ChatArea({ activeChat, setActiveChat }) {
     }
 
     axios
-      .post("http://localhost:8000/api/v1/message/store-media", formData, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-        withCredentials: true,
-      })
+      .post(
+        "https://privatechat-server.onrender.com/api/v1/message/store-media",
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+          withCredentials: true,
+        }
+      )
       .then((data) => {
         const uploadedFileUrl = `${data.data.data.destination}/${data.data.data.filename}`;
 
@@ -144,7 +152,7 @@ export default ChatArea;
 //     };
 
 //     axios
-//       .post("http://localhost:8000/api/v1/message/get-all-messages", formData, {
+//       .post("https://privatechat-server.onrender.com/api/v1/message/get-all-messages", formData, {
 //         withCredentials: true,
 //       })
 //       .then((res) => {
@@ -187,7 +195,7 @@ export default ChatArea;
 //     };
 
 //     axios
-//       .post("http://localhost:8000/api/v1/message/new-message", formData, {
+//       .post("https://privatechat-server.onrender.com/api/v1/message/new-message", formData, {
 //         withCredentials: true,
 //       })
 //       .then((data) => {

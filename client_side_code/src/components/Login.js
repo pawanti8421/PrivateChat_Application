@@ -14,9 +14,13 @@ function Login({ showLogin, setShowLogin }) {
     };
 
     axios
-      .post("http://localhost:8000/api/v1/users/login", formData, {
-        withCredentials: true,
-      })
+      .post(
+        "https://privatechat-server.onrender.com/api/v1/users/login",
+        formData,
+        {
+          withCredentials: true,
+        }
+      )
       .then((data) => {
         alert(data.data.message);
 
