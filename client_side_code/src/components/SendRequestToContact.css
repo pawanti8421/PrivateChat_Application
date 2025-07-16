@@ -1,0 +1,137 @@
+/* FULL SCREEN MODAL CONTAINER */
+.send-request-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CARD INSIDE MODAL */
+.send-request-card {
+  max-width: 500px;
+  width: 90%;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  position: relative;
+  text-align: center;
+  z-index: 1001;
+}
+
+.request-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.request-message {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.invite-button {
+  background-color: #4a90e2;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.invite-button:hover {
+  background-color: #3a78c2;
+}
+
+
+.share-options {
+
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.share-link {
+  padding: 0.6rem;
+  border-radius: 6px;
+  font-weight: 500;
+  text-decoration: none;
+  color: white;
+  transition: opacity 0.2s;
+}
+
+.share-link:hover {
+  opacity: 0.85;
+}
+
+.share-link.native {
+  background-color: #4a90e2;
+}
+
+.share-link.whatsapp {
+  background-color: #25d366;
+}
+
+.share-link.email {
+  background-color: #0072c6;
+}
+
+.share-link.telegram {
+  background-color: #0088cc;
+}
+
+.share-link.twitter {
+  background-color: #1da1f2;
+}
+
+.share-link.facebook {
+  background-color: #3b5998;
+}
+
+.share-link.copy {
+  background-color: #555;
+}
+
+.close-btn {
+  background-color: #e74c3c;
+  color: white;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.note {
+  font-size: 0.75rem;
+  color: #999;
+  margin-top: 1rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 845px) {
+  .send-request-card
+  {
+    padding: 1.5rem 1rem;
+  }
+
+  .request-heading {
+    font-size: 1.25rem;
+  }
+
+  .share-link {
+    font-size: 0.95rem;
+  }
+}
