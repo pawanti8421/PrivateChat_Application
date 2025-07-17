@@ -4,7 +4,7 @@ import { ImWhatsapp } from "react-icons/im";
 import { TfiEmail } from "react-icons/tfi";
 
 function SendRequestToContact({ showSendRequest, setShowSendRequest }) {
-  const inviteUrl = "https://privatechat.example.com";
+  const inviteUrl = "https://privatechat-client.onrender.com";
   const shareText = "Join me on PrivateChat to start a conversation!";
 
   const handleNativeShare = async () => {
